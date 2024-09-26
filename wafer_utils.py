@@ -2,7 +2,7 @@ import scipy.io as sio
 import os
 import tqdm
 import numpy as np
-import WaFerFWv2.WaFerUtils as wfu
+import WaFerUtils as wfu
 import math
 import matplotlib.pyplot as plt
 import seaborn as sns
