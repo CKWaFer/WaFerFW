@@ -7,7 +7,7 @@ from data_loader import WaFerCNNDataset
 
 if __name__ == "__main__":
     # 样例数据
-    data = torch.zeros(size=(100, 200, 100), dtype=torch.float)  # 数据，样本数为 100
+    data = torch.zeros(size=(100, 200, 150), dtype=torch.float)  # 数据，样本数为 100
     labels = torch.zeros(size=(100,), dtype=torch.long)  # 标签，样本数为 100
 
     """---------------------------划分训练集和测试集---------------------------"""
