@@ -42,9 +42,9 @@ def read_mats_by_txt(mat_dir: str, bs_txt_path: str, profix: str):
             none_list.append(bs_id)
             continue
         mat = sio.loadmat(mat_path)[profix]  # 读取文件
-        if mat.shape[1] != 1833:
-            none_list.append(bs_id)
-            continue
+        # if mat.shape[1] != 1833:
+        #     none_list.append(bs_id)
+        #     continue
         if min_tp > mat.shape[0]:
             min_tp = mat.shape[0]
         mat_list.append(mat)
@@ -53,7 +53,7 @@ def read_mats_by_txt(mat_dir: str, bs_txt_path: str, profix: str):
         mat_list[i] = mat_list[i][:min_tp, 228: 428]
     return mat_list
 
-def read_fc_by_txt(mat_dir: str, bs_txt_path: str, profix: str):
+def read_ROISignal_by_txt(mat_dir: str, bs_txt_path: str, profix: str, begin_idx=228, end_idx=428):
     # 打开文件
     with open(bs_txt_path, 'r') as file:
         # 读取所有行并存储到列表中
@@ -72,12 +72,9 @@ def read_fc_by_txt(mat_dir: str, bs_txt_path: str, profix: str):
             continue
         mat = sio.loadmat(mat_path)[profix]  # 读取文件
         mat = np.transpose(mat, (1, 0))
-        mat = mat[228: 428]
+        mat = mat[begin_idx: end_idx]
         fc = wfu.getPearson_ndarray(data=mat, show=False)
-        if fc.shape != (200, 200):
-            # raise BaseException(f"{mat_fn}: {fc.shape} - {mat.shape}")
-            none_list.append(bs_id)
-            continue
+    
         fc_list.append(fc)
         id_list.append(bs_id)
     print(f" - 数据缺失: {none_list}")
