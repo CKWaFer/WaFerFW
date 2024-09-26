@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 import torch
 import scipy.io as sio
-import WaFerFWv2.WaFerUtilsGCN as wfugcn
-import WaFerFWv2.WaFerUtils as wfdu
-from WaFerFWv2.data_loader import WaFerCNNDataset
+import WaFerUtilsGCN as wfugcn
+import WaFerUtils as wfdu
+from data_loader import WaFerCNNDataset
 import networkx as nx
 # import SimpleITK as sitk
 # import open3d as o3d
