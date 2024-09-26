@@ -41,6 +41,10 @@ class UNet(nn.Module):
         self.final = nn.Conv2d(64, out_channels, kernel_size=1)
 
     def forward(self, x):
+        # 测试专用
+        if len(x.shape) == 3:
+            x = x.unsqueeze(1)
+            
         # Encoding
         enc1 = self.enc1(x)
         enc2 = self.enc2(self.pool(enc1))
