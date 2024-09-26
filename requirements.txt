@@ -1,0 +1,14 @@
+docx==0.2.4
+matplotlib==3.7.1
+natsort==8.4.0
+networkx==3.2.1
+nibabel==5.2.1
+numpy==1.23.0
+pandas==2.2.3
+scikit_learn==1.5.2
+scipy==1.14.1
+seaborn==0.13.2
+SimpleITK==2.3.1
+SimpleITK==2.4.0
+torch==2.1.2+cu118
+tqdm==4.66.4
