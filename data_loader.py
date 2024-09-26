@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 import scipy.io as sio
 import SimpleITK as sitk
-import WaFerFWv2.WaFerUtils as wfu
-import  WaFerFWv2.wafer_utils as wafer_utils
+import WaFerUtils as wfu
+import  wafer_utils as wafer_utils
 from torch.utils import data as data_utils
 
 
