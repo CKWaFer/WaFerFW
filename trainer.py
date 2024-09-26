@@ -4,27 +4,15 @@ import random
 import numpy as np
 import torch
 import os
-
-# # 设定全局随机种子
-# seed_value = 0   # 设定随机数种子
-# np.random.seed(seed_value)
-# random.seed(seed_value)
-# os.environ['PYTHONHASHSEED'] = str(seed_value)  # 为了禁止hash随机化，使得实验可复现。
-# torch.manual_seed(seed_value)     # 为CPU设置随机种子
-# torch.cuda.manual_seed(seed_value)      # 为当前GPU设置随机种子（只用一块GPU）
-# torch.cuda.manual_seed_all(seed_value)   # 为所有GPU设置随机种子（多块GPU）
-# torch.backends.cudnn.deterministic = True
-# torch.backends.cudnn.benchmark = False
-
 import math
 import platform
 import tqdm
 import time
 import matplotlib.pyplot as plt
 from torch.utils.data.dataloader import DataLoader
-from WaFerFWv2.wafer_utils import create_roc_data, draw_ROC
-from WaFerFWv2.data_loader import WaFerCNNDataset
-from WaFerFWv2.logger import Logger
+from wafer_utils import create_roc_data, draw_ROC
+from data_loader import WaFerCNNDataset
+from logger import Logger
 import warnings
 warnings.filterwarnings('ignore')
 
