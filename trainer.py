@@ -40,7 +40,7 @@ class Trainer:
         momentum=0.9,
         loss_func=torch.nn.CrossEntropyLoss(),
         logs_dir='./runs/',
-        min_distance=0.018,  # 指标间最小差距
+        min_distance=0.1,  # 指标间最小差距
         early_stop_epoch=50,  # 触发Early Stop的 Epoch轮数
         best_from='val',  # 从 val / test 中得到最好指标
         positive_sample_list=None,  # 将第 idx 类作为正样本，其余作为负样本，计算最好指标，None为计算平均值的最好指标
