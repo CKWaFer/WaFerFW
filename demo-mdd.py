@@ -40,7 +40,6 @@ if __name__ == "__main__":
     }
     keys = ['rois', 'labels', 'ids']
     ids = data_package['ids']
-    shuffle_switch = True
     """---------------------------打乱数据集 (打乱后不可二次训练)---------------------------"""
     if shuffle_switch:
         print(" [Warning] - 数据集顺序被打乱, 本次结果不可二次训练")
